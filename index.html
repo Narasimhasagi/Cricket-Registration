@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(https://images.deccanherald.com/deccanherald/2023-10/01de8f30-9390-4b6c-b091-854324e7d974/iStock_1255328634.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Align the form to the right */
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: right; /* Align the title to the right */
+            color: #fff; /* Set the title color to white */
+            font-weight: bold; /* Make the title bold */
+            margin: 150px; /* Remove default margin */
+        }
+
+        form {
+            max-width: 500px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: auto; /* Adjusted to move the form to the right */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cricket Registration Form</h2>
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required><br>
+
+        <label for="collegeName">College Name:</label>
+        <input type="text" name="collegeName" required><br>
+
+        <label for="registrationNumber">College Registration Number:</label>
+        <input type="text" name="registrationNumber" required><br>
+
+        <label for="address">Address:</label>
+        <textarea name="address" rows="4" required></textarea><br>
+
+        <label for="bonafideCertificate">Bonafide Certificate (PDF, JPG, PNG):</label>
+        <input type="file" name="bonafideCertificate" accept=".pdf, .jpg, .jpeg, .png" required><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
